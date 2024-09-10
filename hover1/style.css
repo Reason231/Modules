@@ -1,0 +1,97 @@
+/* Please read the readme.md file */
+.container{
+    border: 2px solid red;
+    width: 70vw;
+    height: 45vh;
+    background-image: url(./1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    transition: all 0.3s linear;
+
+}
+
+
+.mask{
+    background-image: url(./2.png);
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.1s ease-in;
+    width: 70vw;
+    height: 45vh;
+}
+
+.mask img{
+    z-index: 0;
+}
+
+.mask h1{
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: black;
+    color: white;
+    transition: all 0.2s ease-in-out;
+    transform: translateY(-30px);
+    border: 2px solid red;
+    width: 100%;
+}
+
+h1 span{
+    position: relative;
+    left: 25%;
+}
+.mask p{
+    padding: 0px 15px;
+    color: white;
+    transition: all 0.2s ease-in-out;
+    transform: translateY(58px);
+
+}
+.mask a{
+    text-decoration: none;
+    color: aliceblue;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: black;
+}
+
+.mask:hover{
+    opacity: 0.85;
+}
+
+.mask:hover h1{
+    transform: translateY(5px);
+}
+
+.mask:hover p{
+    transform: translateY(-3px);
+}
+
+.mask:hover .info{
+    transform: translateY(-5px);
+}
+.container:hover{
+    background-color: orange;
+    opacity: 0.9;
+    transform: skew(35px);
+    background-size: 105%;
+    background-position:top;
+}
+
+.info{
+    padding: 18px;
+    transform: translateY(10px);
+    transition: all 0.2s ease-in-out;
+}
+
