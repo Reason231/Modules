@@ -1,0 +1,140 @@
+main {
+  display: flex;
+  flex-direction: column;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.recepieText h2 , .instructions h2 , .nutrition h2 , .ingredients h2{
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: hsl(14, 45%, 36%);
+  padding-top: 0.8rem;
+}
+
+
+.recepieText h2{
+  color: black;
+}
+
+.textContent {
+  padding: 1em;
+}
+
+/* prepartation section */
+.preparationTime li{
+  padding-top: 0.3rem;
+}
+.preparationTime {
+  background-color: hsl(330, 100%, 98%);
+  margin-top:2rem;
+  padding:0.2rem 1.5rem;
+}
+
+.preparationTime h4{
+  color: hsl(332, 51%, 32%);
+}
+
+/* ingredients section */
+.ingredients li{
+  padding-top: 0.4rem;
+}
+
+.ingredients ul{
+  padding-bottom: 0.5rem;
+}
+
+/* instruction section */
+.instructions li{
+  padding-top: 0.4rem;
+}
+
+.instructions ol{
+  padding-bottom: 1rem;
+}
+
+
+/* list */
+ul li{
+  list-style-type: none; /* Removes the default bullet */
+  position: relative;
+}
+
+ul li::before{
+  color: hsl(332, 51%, 32%) ;
+  content: '•'; /* Custom bullet character */
+  position: absolute; /* Absolute positioning */
+  left: -20px; 
+  font-size: 24px;
+}
+
+ol li{
+  list-style-type: none; /* Removes the default number */
+  position: relative;
+}
+
+ol li::before{
+  color: hsl(332, 51%, 32%); /* Color for the numbers */
+  content: counter(my-counter) ". "; /* Custom counter with a period */
+  counter-increment: my-counter; /* Increments the counter for each <li> */
+  position: absolute; /* Absolute positioning */
+  left: -20px; /* Adjust the positioning of the number */
+  font-size: 14px; 
+  font-weight: 500;
+}
+
+ol{
+  counter-reset: my-counter; 
+}
+
+
+
+.nutrition table {
+  text-align: center; /* Center-align text */
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 1rem;
+  border-collapse: collapse;
+  position: relative; /* For positioning pseudo-elements */
+}
+
+.nutrition table tr {
+  position: relative; /* Positioning context for pseudo-elements */
+}
+
+.nutrition table tr::after {
+  content: '';
+  position: absolute;
+  left: 50%; /* Center horizontally */
+  bottom: -1px; /* Position at the bottom of the row */
+  width: 55vw; /* Width of the HR effect */
+  border-top: 1px solid hsl(0, 0%, 78%); /* Color of the line */
+  transform: translateX(-50%); /* Center the pseudo-element */
+}
+
+.nutrition table tr:last-child::after {
+  display: none; /* Remove HR after the last row */
+}
+
+.nutrition table tr td:first-child {
+  color: hsl(0, 0%, 30%); /* Darker color for the label */
+  font-weight: 400; /* Light font weight for the labels */
+  padding: 0.6rem 0; /* Adjust padding as needed */
+  transform: translateX(2rem);
+}
+
+.nutrition table tr td:last-child {
+  color: hsl(14, 45%, 36%); /* Bolder color for the values */
+  font-weight: 700; /* Bold font weight for the values */
+  transform: translateX(-4rem);
+}
+
+
+@media screen and (min-width: 350px) {
+  main img {
+    width: 100%;
+  }
+}
