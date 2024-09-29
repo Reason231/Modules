@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(166, 161, 199);
+}
+.top{
+    /* border: 2px solid red; */
+    background-image: url(../assets/images/background-pattern-mobile.svg);
+    height: 35dvh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main{
+    /* border: 2px solid blue; */
+    padding: 5px 20px 5px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80dvw;
+    transform: translate(10dvw,-20vh);
+    border-radius: 0.8rem;
+    background-color: white;
+}
+
+.faq-item{
+    border: 1px solid hsl(180, 13%, 94%);
+    border-radius:2px;
+}
+
+.faqQ{
+    font-family: "Barlow", sans-serif;
+    font-size:clamp(4px, 18px , 22px);
+    font-weight: 600;
+    font-style: normal;
+}
+
+.faqA{
+    height: 0px;
+    visibility: hidden;
+    transition: height 0.1s ease-out;
+    color: #737373;
+}
+
+/* Main part for the visibiltiy */
+/* JS lea yeslai active garauncha ra text dekhincha */
+.faq-item.active .faqA{
+    height: 32px;
+    visibility: visible;
+    border: 1px solid #EEF2F2
+}

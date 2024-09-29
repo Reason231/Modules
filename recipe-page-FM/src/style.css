@@ -134,7 +134,92 @@ ol{
 
 
 @media screen and (min-width: 350px) {
+  *{
+    box-sizing: border-box;
+  }
+  
   main img {
     width: 100%;
+  }
+}
+
+@media screen and (min-width:880px){
+  body{
+    background-color:hsl(330, 100%, 98%);
+    display: flex;
+    justify-content: center;
+  }
+  main{
+    width: 50vw;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.8rem;
+    transform: translateY(6vh);
+  }
+
+  main img{
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .recepieText h2{
+    padding-top: 0px;
+  }
+  .recepieText{
+    transform: translate(-10px,-18px);
+  }
+
+  .preparationTime{
+    transform: translate(-10px,-30px);
+    border-radius: 8px;
+  }
+
+  .preparationTime ul{
+    transform: translate(-20px,-15px);
+  }
+
+  ul li::before{
+    transform: translateY(-6px);
+  }
+
+  .ingredients{
+    transform: translateY(-30px);
+  }
+  .nutrition table {
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 1rem;
+    border-collapse: collapse;
+    position: relative; /* For positioning pseudo-elements */
+  }
+  
+  .nutrition table tr {
+    position: relative; /* Positioning context for pseudo-elements */
+  }
+  
+  .nutrition table tr::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; /* Position at the bottom of the row */
+    width: 45vw; /* Width of the HR effect */
+    border-top: 1px solid hsl(0, 0%, 78%); /* Color of the line */
+    transform: translateX(-50%); /* Center the pseudo-element */
+  }
+  
+  .nutrition table tr:last-child::after {
+    display: none; /* Remove HR after the last row */
+  }
+  
+  .nutrition table tr td:first-child {
+    color: hsl(0, 0%, 30%); /* Darker color for the label */
+    font-weight: 400; /* Light font weight for the labels */
+    padding: 0.6rem 0; /* Adjust padding as needed */
+    transform: translateX(0rem);
+  }
+  
+  .nutrition table tr td:last-child {
+    color: hsl(14, 45%, 36%); /* Bolder color for the values */
+    font-weight: 700; /* Bold font weight for the values */
+    transform: translateX(0rem);
   }
 }

@@ -1,0 +1,46 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(62, 62, 62);
+    color: white;
+    position: sticky;
+    top: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav ul{
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.nav ul :nth-child(1){
+    color: red;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    height: 84dvh;
+    color: white;
+}
+
+main h3{
+    font-size: 2.5rem;
+}
+
+main p{
+    font-size: 1.2rem;
+}
+
+.nav ul li:hover{
+    color: red;
+}
+
+.nav.active{
+    background-color: white;
+    color: black;
+}
