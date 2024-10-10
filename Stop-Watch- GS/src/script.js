@@ -1,57 +1,3 @@
-// var span = document.querySelector("span");
-// const stopButton = document.getElementById("stop");
-// const startButton = document.getElementById("start");
-// const resetButton = document.getElementById("reset");
-
-// let intervalId;  // To store the interval ID
-// let hours = 0, minutes = 0, seconds = 0;
-// let isRunning = false; // To prevent multiple intervals from starting
-
-// function updateDisplay() {
-//     // Format the time to always show two digits
-//     span.innerHTML = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-// }
-
-// function stopwatch() {
-//     if (isRunning) return; // Prevent multiple intervals from starting
-//     isRunning = true;
-
-//     intervalId = setInterval(() => {
-//         seconds += 1;
-
-//         if (seconds === 60) {
-//             seconds = 0;
-//             minutes += 1;
-//         }
-
-//         if (minutes === 60) {
-//             minutes = 0;
-//             hours += 1;
-//         }
-
-//         updateDisplay();
-//     }, 3); // Run every second
-// }
-
-// function myStopFunction() {
-//     clearInterval(intervalId); // Stop the interval
-//     isRunning = false; // Allow restarting
-// }
-
-// function resetStopwatch() {
-//     clearInterval(intervalId); // Stop the interval
-//     isRunning = false; // Allow restarting
-//     hours = 0;
-//     minutes = 0;
-//     seconds = 0;
-//     updateDisplay(); // Reset the display to 00:00:00
-// }
-
-// // Event listeners for buttons
-// stopButton.addEventListener("click", myStopFunction);
-// startButton.addEventListener("click", stopwatch);
-// resetButton.addEventListener("click", resetStopwatch);
-
 
 let [seconds,minutes,hours]=[0,0,0]
 let displayTime=document.getElementById("displayTime")
@@ -78,19 +24,23 @@ function stopWatch(){
 
 // It starts the watch
 function watchStart(){
+
+    // When timer is not null, it means an interval is already running.
     if(timer!==null){
+        //  Clears any existing interval to prevent multiple intervals from running simultaneously.
         clearInterval(timer);
     }
 
+    // When the first time stopwatch starts. it assigned the value to the timer and now it doesn't become the null
     timer=setInterval(stopWatch, 1000);
 }
 
-// It stop the watch
+// It stops the watch
 function watchStop(){
     clearInterval(timer)
 }
 
-// It reset the timer
+// It resets the timer
 function watchReset() {
     clearInterval(timer);  // Stop the interval
     seconds = 0;
@@ -98,3 +48,6 @@ function watchReset() {
     hours = 0;
     displayTime.innerHTML = "00:00:00";  // Reset the display
 }
+
+
+
