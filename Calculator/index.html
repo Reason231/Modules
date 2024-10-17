@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <input type="text" readonly id="result" value="0">
+    
+    <div id="maindiv">
+        <button onclick="calculation('+')" id="buttons" class="operators">+</button>
+        <button onclick="calculation('7')" id="buttons">7</button>
+        <button onclick="calculation('8')" id="buttons">8</button>
+        <button onclick="calculation('9')" id="buttons">9</button>
+        <button onclick="calculation('-')" id="buttons" class="operators">-</button>
+        <button onclick="calculation('4')" id="buttons">4</button>
+        <button onclick="calculation('5')" id="buttons">5</button>
+        <button onclick="calculation('6')" id="buttons">6</button>
+        <button onclick="calculation('*')" id="buttons" class="operators">*</button>
+        <button onclick="calculation('1')" id="buttons">1</button>
+        <button onclick="calculation('2')" id="buttons">2</button>
+        <button  onclick="calculation('3')" id="buttons">3</button>
+        <button onclick="calculation('/')" id="buttons" class="operators">/</button>
+        <button onclick="calculation('0')" id="buttons">0</button>
+        <button onclick="calculation('.')" id="buttons">.</button>
+        <button onclick="calculate()" id="buttons">=</button>
+        <button onclick="clearDisplay()" id="buttons" class="operators">C</button>
+        <button id="clearValue" class="clearValuebuttons" class="operators">
+            <img src="https://cdn4.iconfinder.com/data/icons/math-calculator-solid/48/Calculator-Math_hapus-512.png" alt="" width="34">
+        </button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

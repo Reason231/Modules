@@ -1,0 +1,87 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height to center vertically */
+}
+
+#result{
+    border: none;
+    width: 30vw;
+    height: 8vw;
+    color: white;
+    background-color: #000000ca;
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 1.7rem;
+}
+
+#maindiv{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 30vw;
+    height: 60vh;
+    padding: 15px;
+    background-color: #000000e8;
+}
+
+#buttons{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50vw;
+    background-color: hsla(0, 1%, 39%, 0.338);
+    font-family: sans-serif;
+    font-size: 1.7rem;
+    color: white;
+    padding: 7px;
+}
+.clearValuebuttons{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50vw;
+    background-color: hsla(0, 1%, 43%, 0.984);
+    font-family: sans-serif;
+    font-size: 1.7rem;
+    color: white;
+    padding: 7px;
+}
+.operators{
+    background-color: hsl(39, 93%, 51%) !important;
+}
+
+#buttons:hover{
+    cursor: pointer;
+}
+
+#buttons:active{
+    background-color: hsla(0, 0%, 86%, 0.338);
+}
+
+.operators:active{
+    background-color: hsl(39, 41%, 57%) !important;
+    
+}
+
+@media (min-width: 1200px) and (max-width: 1366px) {
+    /* CSS rules for Toshiba Satellite C655 or similar laptops go here */
+   #buttons{
+    width: 60px;
+    height: 59px;
+    padding: 14px;
+   }
+
+   #maindiv{
+    gap: 8px;
+    height: 62vh;
+   }
+}
+
