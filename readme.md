@@ -4,4 +4,4 @@
 ## FM represents the projects done from the FRONTED MENTOR Website
 - https://www.frontendmentor.io/challenges
 
-## GS represnets the projects done from the GREAT STACK Youtube 30 Days, 30 Javascript Projects
+## Tic-tac-toe and rock paper scissor are made from the shadraa kapoor

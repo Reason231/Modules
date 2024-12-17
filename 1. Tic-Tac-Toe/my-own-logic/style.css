@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    /* border: 2px solid red; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 20dvw;
+    gap: 20px;
+}
+
+.btn{
+    width: 100px;
+    height: 80px;
+    border: 2px solid red;
+}
+
+
+#cross{
+    height: 80px;
+    width: 100px;
+}
+
+#circle{    
+    margin-left: 20px;
+    height: 70px;
+    width: 60px;
+}
